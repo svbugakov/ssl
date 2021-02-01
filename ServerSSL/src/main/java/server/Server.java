@@ -23,11 +23,11 @@ public class Server {
         and optional client authentication.*/
         Security.addProvider(new BouncyCastleProvider());
         //specifing the keystore file which contains the certificate/public key and the private key
-        System.setProperty("javax.net.ssl.keyStore","/home/apex/solkeystore/sol.jks");
+        System.setProperty("javax.net.ssl.keyStore","/home/apex/keyStore/server/serverKeyStore.jks");
         //specifing the password of the keystore file
         System.setProperty("javax.net.ssl.keyStorePassword","SvbDub");
 
-        System.setProperty("javax.net.ssl.trustStore","/home/apex/svbkeystore/leibaTrustStore.jts");
+        System.setProperty("javax.net.ssl.trustStore","/home/apex/keyStore/server/serverTrustStore.jts");
         //specifing the password of the trustStore file
         System.setProperty("javax.net.ssl.trustStorePassword","SvbDub");
 

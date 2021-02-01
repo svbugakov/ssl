@@ -22,11 +22,11 @@ public class Client {
         and optional client authentication.*/
         Security.addProvider(new BouncyCastleProvider());
         //specifing the trustStore file which contains the certificate & public of the server
-        System.setProperty("javax.net.ssl.keyStore","/home/apex/svbkeystore/leiba.jks");
+        System.setProperty("javax.net.ssl.keyStore","/home/apex/keyStore/client/clientKeyStore.jks");
         //specifing the password of the keystore file
         System.setProperty("javax.net.ssl.keyStorePassword","SvbDub");
 
-        System.setProperty("javax.net.ssl.trustStore","/home/apex/solkeystore/svbTrustStore.jts");
+        System.setProperty("javax.net.ssl.trustStore","/home/apex/keyStore/client/clientTrustStore.jts");
         //specifing the password of the trustStore file
         System.setProperty("javax.net.ssl.trustStorePassword","SvbDub1");
         //This optional and it is just to show the dump of the details of the handshake process
